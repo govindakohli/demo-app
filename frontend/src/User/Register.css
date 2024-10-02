@@ -1,0 +1,111 @@
+  
+  /* Base styles for the registration container */
+  .register-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Styling for the title */
+  .register-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Styling for the form */
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  /* Style for each form group */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label styling */
+  .form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  /* Input styling */
+  .form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input hover and focus effect */
+  .form-input:hover,
+  .form-input:focus {
+    border-color: #333;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Submit button hover effect */
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .register-container {
+      padding: 15px;
+    }
+  
+    .register-title {
+      font-size: 1.75rem;
+    }
+  
+    .form-input {
+      font-size: 0.9rem;
+    }
+  
+    .submit-button,
+    .show-data-button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  }
+  

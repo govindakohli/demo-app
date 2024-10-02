@@ -1,0 +1,8 @@
+/* Center the form in the middle of the page */
+html, body {
+    background-color: #e9ecef; 
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }

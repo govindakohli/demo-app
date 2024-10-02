@@ -1,0 +1,63 @@
+/* AppBarStyles.css */
+
+/* Custom AppBar Styles */
+.custom-appbar {
+    background-color: #1976d2; /* Default MUI primary color */
+    box-shadow: none; /* Removes default shadow */
+    border-bottom: 2px solid #1565c0; /* Adds a border at the bottom for distinction */
+  }
+  
+  /* Menu Icon Button Styling */
+  .menu-icon-button {
+    color: #fff;
+    transition: transform 0.2s ease;
+  }
+  
+  .menu-icon-button:hover {
+    transform: scale(1.1); /* Slight scaling effect when hovered */
+  }
+  
+  /* Typography for the Title */
+  .appbar-title {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Menu Component Styling */
+  .menu-component {
+    color: #333; /* Default color for text in the menu */
+  }
+  
+  .menu-component .MuiPaper-root {
+    background-color: #ffffff; /* Background color for the dropdown */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+  }
+  
+  /* MenuItem Styling */
+  .MuiMenuItem-root {
+    font-family: 'Roboto', sans-serif;
+    color: #1976d2;
+  }
+  
+  .MuiMenuItem-root:hover {
+    background-color: #eeeeee; /* Change background color on hover */
+  }
+  
+  /* Link Styling */
+  .login-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: #1565c0;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .login-link:hover {
+    background-color: #0d47a1; /* Darker shade on hover */
+  }
+  

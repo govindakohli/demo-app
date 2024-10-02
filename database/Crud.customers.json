@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "66d6e93e997b365beaa1d860"
+  },
+  "firstName": "Vidyanand",
+  "lastName": "Nand",
+  "email": "vidya1234@gmail.com",
+  "number": "7777888111",
+  "memberShip": "Diamond",
+  "createdAt": {
+    "$date": "2024-09-03T10:47:26.217Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T10:47:26.217Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d6e96b997b365beaa1d864"
+  },
+  "firstName": "Govinda ",
+  "lastName": "Kohli",
+  "email": "govin123@gmail.com",
+  "number": "1111222337",
+  "memberShip": "Gold",
+  "createdAt": {
+    "$date": "2024-09-03T10:48:11.124Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T10:48:11.124Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d6e990997b365beaa1d868"
+  },
+  "firstName": "Rajmohan",
+  "lastName": "sharma",
+  "email": "raj1234@gmail.com",
+  "number": "1234567890",
+  "memberShip": "Diamond",
+  "createdAt": {
+    "$date": "2024-09-03T10:48:48.113Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T10:50:15.468Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d6ea7a997b365beaa1d884"
+  },
+  "firstName": "Chandan",
+  "lastName": "Kumar",
+  "email": "chand123@gmail.com",
+  "number": "7779998812",
+  "memberShip": "Gold",
+  "createdAt": {
+    "$date": "2024-09-03T10:52:42.732Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T10:52:42.732Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d6ea9e997b365beaa1d888"
+  },
+  "firstName": "Pinky",
+  "lastName": "Kumari",
+  "email": "pink123@gmail.com",
+  "number": "7894561230",
+  "memberShip": "Diamond",
+  "createdAt": {
+    "$date": "2024-09-03T10:53:18.775Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T10:53:18.775Z"
+  },
+  "__v": 0
+}]
