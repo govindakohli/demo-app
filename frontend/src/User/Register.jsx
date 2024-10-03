@@ -37,59 +37,57 @@ const Register = () => {
     });
 
   return (
-    <>
-      <div className="register-container">
-        <h1 className="register-title">REGISTRATION</h1>
-        <form onSubmit={handleSubmit} className="register-form">
-          <div className="form-group">
-            <label className="form-label">Name:</label>
-            <input
-              className="form-input"
-              type="text"
-              name="name"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.name}
-            />
-            <span className="error-message">
-              {touched.name && errors.name ? errors.name : null}
-            </span>
-          </div>
-          <div className="form-group">
-            <label className="form-label">Email:</label>
-            <input
-              className="form-input"
-              type="email"
-              name="email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-            />
-            <span className="error-message">
-              {touched.email && errors.email ? errors.email : null}
-            </span>
-          </div>
-          <div className="form-group">
-            <label className="form-label">Password:</label>
-            <input
-              className="form-input"
-              type="text"
-              name="password"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.password}
-            />
-            <span className="error-message">
-              {touched.password && errors.password ? errors.password : null}
-            </span>
-          </div>
+    <div className="register-container">
+      <h1 className="register-title">REGISTRATION</h1>
+      <form onSubmit={handleSubmit} className="register-form">
+        <div className="form-group">
+          <label className="form-label">Name:</label>
+          <input
+            className="form-input"
+            type="text"
+            name="name"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.name}
+          />
+          <span className="error-message">
+            {touched.name && errors.name ? errors.name : null}
+          </span>
+        </div>
+        <div className="form-group">
+          <label className="form-label">Email:</label>
+          <input
+            className="form-input"
+            type="email"
+            name="email"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+          />
+          <span className="error-message">
+            {touched.email && errors.email ? errors.email : null}
+          </span>
+        </div>
+        <div className="form-group">
+          <label className="form-label">Password:</label>
+          <input
+            className="form-input"
+            type="password"  // Correctly set the input type to password
+            name="password"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.password}
+          />
+          <span className="error-message">
+            {touched.password && errors.password ? errors.password : null}
+          </span>
+        </div>
 
-          <button type="submit" className="submit-button">
-            Submit
-          </button>
-        </form>
-      </div>
-    </>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 

@@ -4,8 +4,9 @@ import * as yup from "yup";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import "./changePassword.css";
 
-const changePassword = () => {
+const ChangePassword = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -59,48 +60,50 @@ const changePassword = () => {
   }
 
   return (
-    <>
-      <h1>Change Password</h1>
-      <Link to="/">
-        <button type="button" className="backbtn">
-          Back
-        </button>
+    <div className="change-password-container">
+      <h1 className="change-password-title">Change Password</h1>
+      <Link to="/" className="back-link">
+        <button type="button" className="back-btn">Back</button>
       </Link>
-      <form onSubmit={formik.handleSubmit}>
-        <div>
-          <label>Old Password</label>
+      <form onSubmit={formik.handleSubmit} className="change-password-form">
+        <div className="form-group">
+          <label htmlFor="oldPassword" className="form-label">Old Password</label>
           <input
             type="password"
             name="oldPassword"
+            id="oldPassword"
+            className="form-input"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.oldPassword}
           />
-          <span>
+          <span className="error-message">
             {formik.touched.oldPassword && formik.errors.oldPassword
               ? formik.errors.oldPassword
               : null}
           </span>
         </div>
-        <div>
-          <label>New Password</label>
+        <div className="form-group">
+          <label htmlFor="newPassword" className="form-label">New Password</label>
           <input
             type="password"
             name="newPassword"
+            id="newPassword"
+            className="form-input"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.newPassword}
           />
-          <span>
+          <span className="error-message">
             {formik.touched.newPassword && formik.errors.newPassword
               ? formik.errors.newPassword
               : null}
           </span>
         </div>
-        <button type="submit">Change Password</button>
+        <button type="submit" className="submit-btn">Change Password</button>
       </form>
-    </>
+    </div>
   );
 };
 
-export default changePassword;
+export default ChangePassword;

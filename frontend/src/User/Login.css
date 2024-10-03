@@ -1,132 +1,128 @@
-/* Base styles for the login container */
+/* Container styling */
 .login-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 25px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 450px;
+  margin: auto auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styling */
+.login-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #343a40;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Form group layout */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input labels */
+.form-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+/* Input fields */
+.form-input {
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus effect */
+.form-input:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 8px rgba(128, 189, 255, 0.25);
+  outline: none;
+}
+
+/* Error messages */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Submit button styling */
+.submit-button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for submit button */
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Register button */
+.register-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for register button */
+.register-button:hover {
+  background-color: #218838;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .login-container {
+    margin-top: 2rem;
+    padding: 20px;
+    max-width: 90%;
   }
-  
-  /* Hover effect for the container */
-  .login-container:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Styling for the title */
+
   .login-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 1.8rem;
   }
-  
-  /* Styling for the form */
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+  .submit-button,
+  .register-button {
+    font-size: 0.9rem;
+    padding: 10px;
   }
-  
-  /* Style for each form group */
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Label styling */
-  .form-label {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  /* Input styling */
-  .form-input {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  /* Input hover and focus effect */
-  .form-input:hover,
-  .form-input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-    outline: none;
-  }
-  
-  /* Error message styling */
-  .error-message {
-    color: red;
-    font-size: 0.875rem;
-    margin-top: 5px;
-  }
-  
-  /* Submit button styling */
-  .submit-button {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  /* Submit button hover effect */
-  .submit-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-  }
-  
-   /* Button to show all data */
-   .show-data-button {
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Hover effect for 'Show All Data' button */
-  .show-data-button:hover {
-    background-color: #218838;
-  }
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .login-container {
-      padding: 20px;
-      max-width: 90%;
-    }
-  
-    .login-title {
-      font-size: 1.75rem;
-    }
-  
-    .form-input {
-      font-size: 0.9rem;
-    }
-  
-    .submit-button,
-    .show-data-button {
-      font-size: 0.9rem;
-      padding: 10px 15px;
-    }
-  }
-  
+}

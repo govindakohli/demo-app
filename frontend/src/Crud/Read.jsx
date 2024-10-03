@@ -119,7 +119,7 @@ function Read() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   if (error) {
@@ -127,13 +127,13 @@ function Read() {
   }
 
   return (
-    <section className="customerpage">
+    <section className="customer-page">
       <h1>
         {isAdmin ? "Admin View - All Customer Data" : "Your Customer Data"}
       </h1>
 
-      <div className="table">
-        <table>
+      <div className="table-container">
+        <table className="customer-table">
           <thead>
             <tr>
               <th>Full Name</th>
@@ -141,14 +141,12 @@ function Read() {
               <th>Contact</th>
               <th>Membership</th>
               <th>Action</th>
-              {/* <th>created by </th> */}
             </tr>
           </thead>
           <tbody>
             {customers.map((customer) => (
               <tr key={customer._id}>
                 <td>
-                  
                   {customer.firstName} {customer.lastName}
                 </td>
                 <td>{customer.email}</td>
@@ -162,20 +160,18 @@ function Read() {
                   </NavLink>
                   <button
                     className="edit-delete-button"
-                    onClick={() => handleDelete(customer._id)
-                    }
+                    onClick={() => handleDelete(customer._id)}
                   >
                     <MdDelete />
                   </button>
                 </td>
-                {/* <td>{customer.createdBy}</td> */}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
       <NavLink to="/create">
-        <button className="adduserbtn">Add New Customer</button>
+        <button className="add-user-btn">Add New Customer</button>
       </NavLink>
     </section>
   );

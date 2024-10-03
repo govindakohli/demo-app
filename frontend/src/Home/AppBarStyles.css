@@ -1,63 +1,258 @@
-/* AppBarStyles.css */
+/* Navbar.css */
 
-/* Custom AppBar Styles */
-.custom-appbar {
-    background-color: #1976d2; /* Default MUI primary color */
-    box-shadow: none; /* Removes default shadow */
-    border-bottom: 2px solid #1565c0; /* Adds a border at the bottom for distinction */
+.navbar {
+  background: linear-gradient(90deg, #8a2b06, #b0450c);
+  color: white;
+  padding: 10px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar-logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: "Georgia", serif;
+}
+
+.navbar-logo:hover {
+  color: #ffd700;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  align-items: center;
+}
+
+.navbar-menu.active {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navbar-menu li {
+  position: relative;
+}
+
+.navbar-menu .menu-item {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px;
+  position: relative;
+  display: block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-menu .menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu .menu-item:hover::after {
+  width: 100%;
+}
+
+.navbar-menu .menu-item:hover {
+  color: #ffd700;
+  transform: translateY(-3px);
+}
+
+.navbar-menu .signin {
+  background: #ffd700;
+  border-radius: 5px;
+  color: #8a2b06;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.navbar-menu .signin:hover {
+  background: #ffdf75;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #8a2b06;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #b0450c;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
   }
-  
-  /* Menu Icon Button Styling */
-  .menu-icon-button {
-    color: #fff;
-    transition: transform 0.2s ease;
+
+  .navbar-menu.active {
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    width: 95%;
   }
-  
-  .menu-icon-button:hover {
-    transform: scale(1.1); /* Slight scaling effect when hovered */
+
+  .navbar-toggle {
+    display: flex;
   }
-  
-  /* Typography for the Title */
-  .appbar-title {
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
+
+  .navbar-menu .signin {
+    background: #ffd700;
+    color: #8a2b06;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
   }
-  
-  /* Menu Component Styling */
-  .menu-component {
-    color: #333; /* Default color for text in the menu */
+
+  .navbar-logo {
+    font-size: 28px;
   }
-  
-  .menu-component .MuiPaper-root {
-    background-color: #ffffff; /* Background color for the dropdown */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+}
+
+@media (max-width: 450px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #8a2b06;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #b0450c;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
   }
-  
-  /* MenuItem Styling */
-  .MuiMenuItem-root {
-    font-family: 'Roboto', sans-serif;
-    color: #1976d2;
+
+  .navbar-menu.active {
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    width: 90%;
   }
-  
-  .MuiMenuItem-root:hover {
-    background-color: #eeeeee; /* Change background color on hover */
+
+  .navbar-toggle {
+    display: flex;
   }
-  
-  /* Link Styling */
-  .login-link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    background-color: #1565c0;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+
+  .navbar-toggle .bar {
+    width: 20px;
+    height: 1.5px;
+    background-color: white;
+    margin: 5px 0;
   }
-  
-  .login-link:hover {
-    background-color: #0d47a1; /* Darker shade on hover */
+
+  .navbar-menu .signin {
+    background: #ffd700;
+    color: #8a2b06;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
   }
-  
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+}
+
+/* Added 320px specific adjustments */
+@media (max-width: 320px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #8a2b06;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    border-top: 1px solid #b0450c;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-toggle .bar {
+    width: 18px;
+    height: 1.5px;
+    background-color: white;
+    margin: 4px 0;
+  }
+
+  .navbar-menu .signin {
+    background: #ffd700;
+    color: #8a2b06;
+    padding: 8px 12px;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .navbar-menu .menu-item {
+    font-size: 14px;
+  }
+
+  .navbar-menu.active {
+    width: 85%;
+    padding: 10px;
+  }
+}

@@ -4,8 +4,9 @@ import * as yup from "yup";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import "./updateProfile.css"
 
-const updateProfile = () => {
+const UpdateProfile = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [initialValues, setInitialValues] = useState({ name: "", email: "" });
   const navigate = useNavigate();
@@ -89,47 +90,53 @@ const updateProfile = () => {
 
   return (
     <>
-      <h1>Update Profile</h1>
-      <Link to="/">
-        <button type="button" className="backbtn">
-          Back
-        </button>
-      </Link>
-      <form onSubmit={formik.handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.name}
-          />
-          <span>
-            {formik.touched.name && formik.errors.name
-              ? formik.errors.name
-              : null}
-          </span>
-        </div>
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
-          />
-          <span>
-            {formik.touched.email && formik.errors.email
-              ? formik.errors.email
-              : null}
-          </span>
-        </div>
-        <button type="submit">Update Profile</button>
-      </form>
+      <div className="profile-container">
+        <h1 className="profile-heading">Update Profile</h1>
+        <Link to="/">
+          <button type="button" className="back-btn">
+            Back
+          </button>
+        </Link>
+        <form onSubmit={formik.handleSubmit} className="profile-form">
+          <div className="form-group">
+            <label className="form-label">Name</label>
+            <input
+              type="text"
+              name="name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+              className="form-input"
+            />
+            <span className="form-error">
+              {formik.touched.name && formik.errors.name
+                ? formik.errors.name
+                : null}
+            </span>
+          </div>
+          <div className="form-group">
+            <label className="form-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+              className="form-input"
+            />
+            <span className="form-error">
+              {formik.touched.email && formik.errors.email
+                ? formik.errors.email
+                : null}
+            </span>
+          </div>
+          <button type="submit" className="submit-btn">
+            Update Profile
+          </button>
+        </form>
+      </div>
     </>
   );
 };
 
-export default updateProfile;
+export default UpdateProfile;
